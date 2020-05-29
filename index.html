@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HangMan!</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="initCont">
+            <div>
+                <select id="selCat" onchange="pickList()">
+                    <option value="00">-category-</option>
+                    <option value="01">food</option>
+                    <option value="02">object</option>
+                    <option value="03">location</option>
+                    <option value="04">animal</option>
+                </select>
+            </div>
+            <div id="initButtCont">
+            </div>
+        </div>
+        <table>
+            <tr id="catDispCont">
+                <th>category:</th>
+                <th id="catDisp"></th>
+            </tr>
+        </table>
+        <table id="hangManContainer">
+            <tr class="hangManRow">
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox">_</th>
+                <th class="hangManBox">_</th>
+                <th class="hangManBox">_</th>
+                <th class="hangManBox"></th>
+            </tr>
+            <tr class="hangManRow">
+                <th class="hangManBox">|</th>
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox" id="head" style="color:white">&#9744;</th>
+                <th class="hangManBox">&nbsp;</th>
+            </tr>
+            <tr class="hangManRow">
+                <th class="hangManBox">|</th>
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox" id="leftArm" style="text-align: right; color:white;">/</th>
+                <th class="hangManBox" id="torso" style="text-align: center; color:white;">|</th>
+                <th class="hangManBox" id="rightArm" style="text-align: left; color:white;">\</th>
+            </tr>
+            <tr class="hangManRow">
+                <th class="hangManBox">|</th>
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox" id="leftLeg" style="text-align: right; color:white;">/</th>
+                <th class="hangManBox">&nbsp;</th>
+                <th class="hangManBox" id="rightLeg" style="text-align: left; color:white;">\</th>
+            </tr>
+        </table>
+        <hr id="break1">
+        <table id="correctBoxCont">
+        </table>
+        <table id="letterOpt" style="display: none">
+            <tr>
+                <th style="cursor: pointer" onclick="letIn('A'); toWin()" id="A">[A]</th>
+                <th style="cursor: pointer" onclick="letIn('B'); toWin()" id="B">[B]</th>
+                <th style="cursor: pointer" onclick="letIn('C'); toWin()" id="C">[C]</th>
+                <th style="cursor: pointer" onclick="letIn('D'); toWin()" id="D">[D]</th>
+                <th style="cursor: pointer" onclick="letIn('E'); toWin()" id="E">[E]</th>
+                <th style="cursor: pointer" onclick="letIn('F'); toWin()" id="F">[F]</th>
+            </tr>
+            <tr>
+                <th style="cursor: pointer" onclick="letIn('G')" id="G">[G]</th>
+                <th style="cursor: pointer" onclick="letIn('H')" id="H">[H]</th>
+                <th style="cursor: pointer" onclick="letIn('I')" id="I">[I]</th>
+                <th style="cursor: pointer" onclick="letIn('J')" id="J">[J]</th>
+                <th style="cursor: pointer" onclick="letIn('K')" id="K">[K]</th>
+                <th style="cursor: pointer" onclick="letIn('L')" id="L">[L]</th>
+            </tr>
+            <tr>
+                <th style="cursor: pointer" onclick="letIn('M')" id="M">[M]</th>
+                <th style="cursor: pointer" onclick="letIn('N')" id="N">[N]</th>
+                <th style="cursor: pointer" onclick="letIn('O')" id="O">[O]</th>
+                <th style="cursor: pointer" onclick="letIn('P')" id="P">[P]</th>
+                <th style="cursor: pointer" onclick="letIn('Q')" id="Q">[Q]</th>
+                <th style="cursor: pointer" onclick="letIn('R')" id="R">[R]</th>
+            </tr>
+            <tr>
+                <th style="cursor: pointer" onclick="letIn('S')" id="S">[S]</th>
+                <th style="cursor: pointer" onclick="letIn('T')" id="T">[T]</th>
+                <th style="cursor: pointer" onclick="letIn('U')" id="U">[U]</th>
+                <th style="cursor: pointer" onclick="letIn('V')" id="V">[V]</th>
+                <th style="cursor: pointer" onclick="letIn('W')" id="W">[W]</th>
+                <th style="cursor: pointer" onclick="letIn('X')" id="X">[X]</th>
+            </tr>
+            <tr>
+                <th style="cursor: pointer" onclick="letIn('Y')" id="Y">[Y]</th>
+                <th style="cursor: pointer" onclick="letIn('Z')" id="Z">[Z]</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </body>
+    <script src="script.js"></script>
+</html>
